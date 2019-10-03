@@ -1,42 +1,61 @@
 # CPE 1040 - Introduction to Computer Engeneering
 
-## Assignment: Migrating micro:bit Programming from Blocks to JavaScript
+## Assignment: Exploring JavaScript by Designing a Microbit "Screensaver"
 
 ### 1. Summary
 
-This assignment asks you to go through a [Intro to CS course with Blocks](https://makecode.microbit.org/courses/csintro) for the micro:bit, and write parallel programs using the JavaScript equivalent of the code in the course modules. This assignment is submitted through Github.
+This assignment asks you to design a program and implement it in micro:bit JavaScript (that is, TypeScript) from scratch. **No Blocks!** This assignment is submitted through Github.
 
 ### 2. Requirements
 
-#### 2.1 Section programs
+#### 2.1 "Screensavers"
 
-1. The CS course is broken down into thematic sections. There are 5 sections + 1 midterm project + 5 sections + final project. Each section has 4 parts. You want the _Activity_ part, which contains the section's CS material and Blocks.
+1. Design 5 abstract, randomized, moving patterns for the 5x5 LED array. Some ideas:
+   1. Rotating "lines" like | / - \ | / -, that are centered at different spots.
+   2. Dots that appear gradually and disappear gradually (use LED intensity), at random positions.
+   3. Gradient waves, vertical, horizontal, or diagonal, where the parallel rows, columns, or diagonal lines change their intentsity in a wave-like manner.
+   4. Concentric version of the gradient waves.
+   5. **BONUS:** For the most original and unexpected "screensaver" pattern.
+   
+2. Make sure you can control which one is displayed. It's a good idea to wrap them in functions.
 
-2. You need to write a _working_ JavaScript (JS) program for the micro:bit for each of these sections/projects, for a total of 12.  
+3. **BONUS:** Write a Screensaver class for the micro:bit.
 
-3. For the non-project sections, you are required to use the JS equivalent of the material from the section. _**Note:** For these programs, you are allowed to look at the JS translation of Blocks programs._
+4. The "screensaver" should time out and the "screen" should go blank.
 
-4. For the midterm project, you are required to use the JS equivalent of the material from all 5 preceding sections.  _**Note:** For this project, you are NOT allowed to look at the JS translation of Blocks programs._ (An aside: if you don't know how to read a statement like "you are not allowed to", the intended and preferred interpretation is "you can do whatever you want and won't be penalized by me, but, if you want to learn most effectively, I suggest that you do not resort to...".)
+#### 2.2 Controls
 
-5. For the final project, you are required to use the JS equivalent of the material from all 10 preceding non-project sections. _**Note:** For this project, you are NOT allowed to look at the JS translation of Blocks programs._
+1. Use the A button to "put the screen to sleep" (that is, activate the "screensaver").
 
-#### 2.2 Github commits & tags
+2. Use the B button to "wake the screen up". When the micro:bit is awake, the 5x5 LED matrix should just scroll some sentence of your choosing.
 
-1. Working in the Makecode browser environment, you cannot save the JS file of your program in a directory of your choosing. It is stored in an in-browser memory object and is not accessible. (A side note: there might be a Makecode app for Windows which might actually allow that, but there is nothing like that for Mac, to the best of knowledge.) So, you will need to copy the JS from Makecode to another editor (preferably, a code editor with syntax highlighting and code manipulation) and then save and commit it.
+3. **BONUS:** Require that the A button is _held down_ for 2 seconds to activate the "screensaver".
 
-2. You need to commit the changes and additions to your assignment for each section or project. This means that there should be _at least_ 12 commits pushed to your remote assignment repository on Github when you are done. I advise you to have more than that, to get used to it.
+#### 2.3 Gestures
 
-2. You need to **tag** the final commit for each section. Tags are under _releases_ in the repository bar on the Github page of the assignment repository. The tag should be one of the following `v0.1`, `v0.2`, ..., `v0.12`, for each section, respectively. (Terminology clarification: the `git` command is `git tag`, but tags are counted as _releases_ on Github.)
+1. Pick 5 gestures to correspond to your 5 "screensavers". When the micro:bit detects a gesture, it should switch to the corresponding "screensaver".
 
-3. You need to update the assignment repository [README.md](README.md) (this document, in the section [Tags](#tags)) with a short description of your section program or project, **before** you tag. You can do that directly on Github after you push your commits from your local repository.
+2. The gestures should work _only_ when the "screensaver" is on.
 
-#### 2.3 Project design
+#### 2.4 Github commits
 
-1. For each of the two projects, you need to include a design "document" in the [README.md](README.md) (this document, in the section [Designs](#designs)).
+1. Feel free to work in MakeCode, as long as you only write JavaScript. 
 
-2. The design "document" should follow the _problem-solving tips_ in the [mini-project page](https://makecode.microbit.org/courses/csintro/miniproject).
+2. Copy your program file from Makecode to the open JS file in your remote repository on Github. The first time around, it will be a new file. Subsequently, overwrite the contents with the updated program. Github will be able to show you the differences between commits, because it does it on the fly and based on textual comparison.
 
-3. The design "document" should have at least the following sections: Goal, Design process, and JS Language Constructs & Objects. Articulating clearly your engineering work is a key professional skill.
+3. Commit often, and include informative messages.
+
+#### 2.5 README
+
+1. Each time you design a new "screensaver", describe it in the [screensavers](#screensavers) section of the README.
+
+#### 2.6 Demo video
+
+1. Record a short video with your phone of your "screensavers" changing from gesture to gesture.
+
+2. Upload it to [Imgur](https://help.imgur.com/hc/en-us/articles/115000083326-What-files-can-I-upload-What-is-the-size-limit-).
+
+3. Include the URL in the [demo URL](#demo-url) section of the README.
 
 ## Resources
 
@@ -86,44 +105,15 @@ This assignment asks you to go through a [Intro to CS course with Blocks](https:
 
 ---
 
-## Tags
+## Screensavers
 
-_**Note:** Add your program descriptions below._
+### SS 1
 
-### v0.1
+_[Your description of screensaver 1]_
 
-**[your description here, linking to the JavaScript [file](example.js)**]
+### SS 2 
 
-### v0.2
+_[And so on]_
 
-**[etc.]**
+## Demo URL
 
-## Designs
-
-### v0.7
-
-One sentence description of the [program](new_program.js) just committed. It does so and so....
-
-
-
-_**Note:** Add your project designs below._
-
-### Midterm project
-
-_**Note:** Add your project designs below._
-
-#### Goal
-
-**[your short description]**
-
-#### Design process
-
-**[your sketches, the things you tried, the questions you asked yourself, the answers, the sticking points, the iterations, the restarts, the final version]**
-
-#### JS Constructs & objects
-
-**[which JavaScript features you used in the implementation of your project idea]**
-
-### Final project
-
-**[etc.]**
